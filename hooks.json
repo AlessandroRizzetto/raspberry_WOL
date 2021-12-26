@@ -1,0 +1,7 @@
+[
+  {
+    "id": "suspend",
+    "execute-command": "/path/to/suspend.sh",
+    "command-working-directory": "/path/to/home"
+  }
+]
