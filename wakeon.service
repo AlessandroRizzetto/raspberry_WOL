@@ -1,0 +1,11 @@
+[Unit]
+Description=Wake-On-LAN
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/nextgen/server.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
