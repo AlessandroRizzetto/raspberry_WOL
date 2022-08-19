@@ -34,10 +34,40 @@ sudo python3 server.py
 ```
 To run the server as a service:
 
+```bash
+cd /lib/systemd/system/
+sudo nano wakeon.service
+```
+Copy the following text and save the file:
+
+```bash
+[Unit]
+Description=Wake-On-LAN
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/raspberry_WOL/server.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Now that we have our service we need to activate it:
+
+```bash
+sudo chmod 644 /lib/systemd/system/wakeon.service
+chmod +x /home/pi/raspberry_WOL/hello_world.py
+chmod +x /home/pi/raspberry_WOL/wakeon.sh
+sudo systemctl daemon-reload
+sudo systemctl enable wakeon.service
+sudo systemctl start wakeon.service
+sudo systemctl status wakeon.service
+```
 
 
 
 
 
-- 
-- 
+
