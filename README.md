@@ -10,8 +10,8 @@
  ---
  
 ## Table of contents
-- [The Project](Project-Description)
-- [Setup](How-to-Setup)
+- [The Project](#Project-Description)
+- [Setup](#How-to-Setup)
 
 # Project Description
 The goal of this project is to turn on different devices connected to a Raspberry Pi.  
