@@ -11,16 +11,23 @@
  
 ## Table of contents
 - [The Project](#Project-Description)
-- [Setup](#How-to-Setup)
+- [How to Setup](#How-to-Setup)
+  - [DNS](#Setup-a-Dynamic-DNS)
+  - [Server](#Server-Configuration)
 
 # Project Description
+<p align="center">
+  <img src="link.png" width="600">
+
+
+
 The goal of this project is to turn on different devices connected to a Raspberry Pi.  
 This is possible thanks to a dedicated android application, connected to a python server running on the Raspberry.  
 
 
 
 # How to Setup
-## Setup a Dynamics DNS
+## Setup a Dynamic DNS
 - Head to [duckDNS](duckdns.org) and create your sub domain after logging in or creating an account.
 - Click on the install tab, chose your OS (Pi in this case) and select your domain from the drop down.
 - Follow the proposed tutorial paying attention to create the duckdns directory in your home.
@@ -68,6 +75,11 @@ sudo systemctl start wakeon.service
 sudo systemctl status wakeon.service
 ```
 
+## Application configuration
+Download the app apk directly to your smartphone and install it by flagging it as an inoffensive file.  
+After opening the app, enter the http address of your server (which you can find on the DuckDNS page).  
+From the settings configure the MAC addresses of your devices and then everything is set up.  
+Enjoy!
 
 
 
