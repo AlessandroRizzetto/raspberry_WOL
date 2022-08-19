@@ -3,11 +3,7 @@
   
   <p align="center">
   Alessandro Rizzetto
-  </p>
- </p>
- <br>
- 
- ---
+   
  
 ## Table of contents
 - [The Project](#Project-Description)
