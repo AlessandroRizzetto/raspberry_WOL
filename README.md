@@ -17,12 +17,14 @@
 
 # Project Description
 <p align="center">
-  <img src="link.png" width="600">
-
-
+  <img src="link.png" width="600" height="320">
+  <img src="/App_file/app_screenshot.jpg" width="200" height="320">  
 
 The goal of this project is to turn on different devices connected to a Raspberry Pi.  
-This is possible thanks to a dedicated android application, connected to a python server running on the Raspberry.  
+This is possible thanks to a dedicated android application, Etherwake and a Python Http server running on the Raspberry.  
+Using the smartphone application "WOL-APP," you can enter the address of a server to connect to, configure the MAC addresses of connected devices, and turn them on whenever you want.  
+WOL-APP communicates directly with the server via POST requests, indicating in the message the information regarding the device to which the Raspberry will send the Magic Packet.  
+There is also an internal database that can store the data of your devices so, once configured, the application remembers the devices connected to your Raspberry. 
 
 
 
@@ -76,6 +78,9 @@ sudo systemctl status wakeon.service
 ```
 
 ## Application configuration
+<p align="center">
+  <img src="/App_file/icon.png" width="200">
+
 Download the app apk directly to your smartphone and install it by flagging it as an inoffensive file.  
 After opening the app, enter the http address of your server (which you can find on the DuckDNS page).  
 From the settings configure the MAC addresses of your devices and then everything is set up.  
