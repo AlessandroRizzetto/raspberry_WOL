@@ -10,6 +10,8 @@
  ---
  
 ## Table of contents
+- [The Project](Project-Description)
+- [Setup](How-to-Setup)
 
 # Project Description
 The goal of this project is to turn on different devices connected to a Raspberry Pi.  
@@ -32,7 +34,8 @@ cd raspberry_WOL
 nano server.py
 sudo python3 server.py
 ```
-To run the server as a service:
+It is possible to run the server as a service at start up by following above steps.
+The service definition must be on the /lib/systemd/system folder. Our service is going to be called "wakeon.service":
 
 ```bash
 cd /lib/systemd/system/
@@ -53,7 +56,6 @@ Restart=on-abort
 [Install]
 WantedBy=multi-user.target
 ```
-
 Now that we have our service we need to activate it:
 
 ```bash
